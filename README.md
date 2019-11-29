@@ -1,13 +1,13 @@
 # EIP-ASSIGNMENT_3
 
-Assignment3
+# Assignment3
 
 
 
 Final Validation accuracy for Base Network = 81.92
 
 
-Model Definition
+# Model Definition
 model = Sequential()
 model.add(SeparableConv2D(48, 3, 3, border_mode='same', input_shape=(32, 32, 3)))
 model.add(Activation('relu'))
@@ -61,15 +61,17 @@ model.add(Flatten()) #10
 model.add(Dense(256))
 model.add(Activation('relu'))
 model.add(Dropout(0.1))
-# model.add(Dense(96))
-# model.add(Activation('relu'))
-# model.add(Dropout(0.1))
+
+#model.add(Dense(96))
+#model.add(Activation('relu'))
+#model.add(Dropout(0.1))
+
 model.add(Dense(num_classes, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 #SeparableConv2D
 
 
-Epoch Logs
+# Epoch Logs
 
 
 Highest val accuracy = 81.13
