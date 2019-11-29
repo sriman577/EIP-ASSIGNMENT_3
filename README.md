@@ -61,11 +61,9 @@ model.add(Flatten()) #10
 model.add(Dense(256))
 model.add(Activation('relu'))
 model.add(Dropout(0.1))
-
 # model.add(Dense(96))
 # model.add(Activation('relu'))
 # model.add(Dropout(0.1))
-
 model.add(Dense(num_classes, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 #SeparableConv2D
