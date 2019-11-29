@@ -1,6 +1,9 @@
 # EIP-ASSIGNMENT_3
 
 Assignment3
+
+
+
 Final Validation accuracy for Base Network = 81.92
 
 
@@ -37,7 +40,6 @@ model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Dropout(0.1))
 
-
 model.add(SeparableConv2D(192,3,3,use_bias=False)) #rf 28 , nout = 2x2x192
 model.add(Activation('relu'))
 model.add(BatchNormalization())
@@ -69,12 +71,10 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 #SeparableConv2D
 
 
-
-
 Epoch Logs
 
-Highest val accuracy = 81.13
 
+Highest val accuracy = 81.13
 
 /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:12: UserWarning: The semantics of the Keras 2 argument `steps_per_epoch` is not the same as the Keras 1 argument `samples_per_epoch`. `steps_per_epoch` is the number of batches to draw from the generator at each epoch. Basically steps_per_epoch = samples_per_epoch/batch_size. Similarly `nb_val_samples`->`validation_steps` and `val_samples`->`steps` arguments have changed. Update your method calls accordingly.
   if sys.path[0] == '':
